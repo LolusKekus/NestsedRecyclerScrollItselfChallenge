@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flContainer"
+    android:layout_margin="5dp"
+    android:focusable="true"
+    android:background="@drawable/item_view_selector"
+    android:layout_width="250dp"
+    android:layout_height="150dp">
+
+    <TextView
+        android:id="@+id/tvItemText"
+        android:text="lolKek Cheburek"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</FrameLayout>
