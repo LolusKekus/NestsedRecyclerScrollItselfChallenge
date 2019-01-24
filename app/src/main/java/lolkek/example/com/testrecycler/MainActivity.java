@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             vDataset.add(i);
         }
 
-        vRecyclerView = findViewById(R.id.vRecyclerView);
+        vRecyclerView = (RecyclerView) findViewById(R.id.vRecyclerView);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);

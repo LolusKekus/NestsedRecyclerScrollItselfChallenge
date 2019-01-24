@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.RecyclerView
+<lolkek.example.com.testrecycler.MyRecyclerView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/hRecyclerView"
     android:orientation="horizontal"

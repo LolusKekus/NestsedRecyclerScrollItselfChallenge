@@ -17,9 +17,19 @@ import java.util.List;
 public class HAdapter extends RecyclerView.Adapter<HAdapter.MyHolder> {
     private final static String TAG = HAdapter.class.getName();
     private List<String> dataset;
+    private View.OnFocusChangeListener listener;
+
 
     public HAdapter(List<String> dataset) {
         this.dataset = dataset;
+    }
+
+    public View.OnFocusChangeListener getListener() {
+        return listener;
+    }
+
+    public void setListener(View.OnFocusChangeListener listener) {
+        this.listener = listener;
     }
 
     public static class MyHolder extends RecyclerView.ViewHolder {
@@ -56,15 +66,14 @@ public class HAdapter extends RecyclerView.Adapter<HAdapter.MyHolder> {
     @Override
     public void onBindViewHolder(final @NonNull MyHolder holder, final int position) {
         holder.setItemText(dataset.get(position));
+
         holder.setOnFocusListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {
-                if (b) {
-                    Log.d(TAG, "onFocusChange: item view focused");
-                }
+                Log.d(TAG, "onFocusChange: item view focused: " + b + ";  id: " + holder.itemView.hashCode());
+
             }
         });
-
     }
 
     @Override
