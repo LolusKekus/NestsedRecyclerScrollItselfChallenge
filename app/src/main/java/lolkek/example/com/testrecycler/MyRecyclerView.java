@@ -27,13 +27,12 @@ public class MyRecyclerView extends RecyclerView {
         super(context, attrs, defStyle);
     }
 
-    @Override
-    public void requestChildFocus(View child, View focused) {
-        int pos = ((LinearLayoutManager)getLayoutManager()).findFirstVisibleItemPosition();
-        View view = getLayoutManager().findViewByPosition(pos);
-        super.requestChildFocus(child, focused);
-    }
-
+    /**
+     * Возможное решение как побороть прокрутку горизонтального ресайклера когда по вертикали скочишь.
+     * @param focused
+     * @param direction
+     * @return
+     */
     @Override
     public View focusSearch(View focused, int direction) {
         View view = super.focusSearch(focused, direction);
